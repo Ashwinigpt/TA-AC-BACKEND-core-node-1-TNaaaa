@@ -1,40 +1,13 @@
-const fs  = require('fs');
-var path = require('path');
+const { readFile , readFileSync}  = require('fs');
 
-fs.readFile('./content.md', 'utf8', (err, content) =>  {
-    console.log('timeout executed');
-    console.timeEnd('task1');
+readFile('./content.md', 'utf8', (err, content) =>  {
+    console.log(content);
 });
 
-// sync code
+var result = readFileSync('./content.md', 'utf8');
+console.log(result);
 
-console.log('Hello World at the first!');
+var buff1 = Buffer.alloc(10);
+console.log(buff1);
 
-console.time('task1');
-for(var i = 0; i < 1000; i++){
-
-}
-console.timeEnd('task1');
-
-console.log('Hello World at the end!');
-
-// async code
-
-console.log('Hello World at the first!');
-
-console.time('task1');
-setTimeout(() => {
-    console.log('timeout executed');
-    console.timeEnd('task1');
-}, 2000);
-
-console.time('task2');
-
-fs.readFile('./content.md', 'utf8', (err, content) =>  {
-    console.log('timeout executed');
-    console.timeEnd('task1');
-});
-
-console.timeEnd('task1');
-
-console.log('Hello World at the end!');
+buff1.write('Welcome to Buffer');
