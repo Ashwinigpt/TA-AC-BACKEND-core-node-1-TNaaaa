@@ -10,4 +10,8 @@ function areaOfCircle(radius){
     return 3.14 * radius * radius;
 }
 
-module.exports = {}
+module.exports = {
+    areaOfSquare : areaOfSquare,
+    areaOfRectangle: areaOfRectangle,
+    areaOfCircle: areaOfCircle
+}
