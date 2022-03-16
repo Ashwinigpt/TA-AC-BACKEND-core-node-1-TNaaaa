@@ -1,5 +1,3 @@
-var fs = require('fs');
-
 console.log('Welcome to Nodejs');
 
 
@@ -9,9 +7,13 @@ var cpus = os.cpus().length;
 var freeM = os.freemem();
 var upTime = os.uptime();
 var versions = process.versions;
-fs.readFile('./file.js')
 
-console.log(cpus, freeM, versions)
+console.log(cpus, freeM, upTime, versions)
 
+var { readFile, readFileSync, unlink } = require('fs');
 
+var sync = readFileSync('./app.js');
 
+readFile('./app.js', (err, content) => {
+    console.log(err, content.toString);
+})
