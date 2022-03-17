@@ -3,15 +3,15 @@ var http = require('http');
 var server = http.createServer(handleRequest);
 
 function handleRequest(request, response){
-    console.log(request.method, request.url);
     if(request.method === 'GET' && request.url === '/'){
-        request.write('Welcome to homepage');
-        request.end()
+        response.setHeader('Content-Type', 'text/plain');
+        response.end('Welcome to homepage')
     }else if(request.method === 'GET' && request.url === '/about'){
         response.setHeader('Content-Type', 'text/html');
-        response.end('<h2>this is all about NodeJS<h2/>');
+        response.end('<h2>this is all about NodeJS<h2/>')
     }else if(request.method === 'POST' && request.url === '/about'){
-        response.end(`{message: this is a post request}`);
+        response.setHeader('Content-Type', 'application/json');
+        response.end(JSON.stringify({message: 'this is a post request'}));
     }
     
 }
