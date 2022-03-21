@@ -1,0 +1,702 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*custom*/
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+.container-1{
+  max-width: 1200;
+  padding: 0 128px;
+  margin: 0 auto;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+/*header-1*/
+.header-1{
+  background-color: rgb(24,37,93);
+  padding: 12px 0;
+}
+.location a{
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+.gmail a{
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 450px;
+}
+.icons a{
+  margin-right: 15px;
+  color: white;
+  font-size: 12px;
+}
+/*header-2*/
+.header-2{
+  padding: 16px 0;
+}
+.header-nav a{
+  margin: 15px;
+  text-decoration: none;
+  font-size: 10px;
+}
+.contact-now{
+  background-color: rgb(255,73,101);
+  color: white;
+  padding: 10px;
+  font-size: 10px;
+  border-radius: 5px;
+  width: 120px;
+  text-align: center;
+}
+/*main*/
+.container-2{
+  max-width: 1200;
+  margin: 0 auto;
+  padding: 0 250px;
+  align-items: unset;
+}
+.bg-img{
+  background-image: url(../assets/media/hero/h1_hero.jpg);
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+.learn-more{
+  background-color: rgb(255,73,101);
+  color: white;
+  width: 120px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+.child{
+  position: absolute;
+  top: 30%;
+  width: 30%;
+}
+.welcome{
+  color: rgb(255,73,101);
+  font-size: 10px;
+  padding: 10px;
+}
+h1{
+  font-size: 40px;
+  font-weight: bolder;
+  color: rgb(24,37,93);
+  margin-bottom: 20px;
+}
+/*business planning*/
+.bg-color{
+  background-color: rgb(246,248,254);
+}
+.business{
+  color: rgb(24,37,93);
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.para{
+  font-size: 10px;
+  color: rgb(90, 106, 134);
+}
+.team-1 img{
+  width: 100%;
+}
+.flex-30{
+  flex: 0 1 30%;
+}
+.box{
+  border: 2px red solid;
+  height: 270px;
+  width: 230px;
+  padding: 20px;
+  background-color: white;
+}
+h4{
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(24,37,93);
+}
+.line{
+  width: 60px;
+  height: 2px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: red;
+}
+.view{
+  font-size: 10px;
+  margin-top: 25px;
+  color: rgb(24,37,93);
+}
+.padding{
+  padding: 100px 220px;
+}
+/*grp work*/
+.grp-img{
+  width: 400px;
+  height: 380px;
+  margin-top: 100px;
+}
+.grp-work{
+  position: relative;
+}
+.grp-work-box{
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  margin-right: 420px;
+  padding: 25px;
+}
+h5{
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(24,37,93);
+}
+.grp-work-box .grp-work-para{
+  font-size: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(90, 106, 134);
+}
+/*our-services*/
+h6{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 60px;
+  color: black;
+}
+.service-1{
+  background-color: rgb(252,253,255);
+  width: 20%;
+}
+.team-1 a{
+  margin-left: 50px;
+  font-size: 40px;
+  color: gray;
+}
+.more-service{
+  border: 2px red solid;
+  text-align: center;
+  width: 120px;
+  font-size: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: red;
+  margin-left:350px;
+  margin-top: 80px;
+}
+/*completed cases*/
+.bg-color1{
+  background-color: rgb(246,248,254);
+  height: 500px;
+  position: relative;
+}
+.completed{
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  right: 50%;
+}
+.completed-cases{
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(24,37,93);
+}
+.see-more{
+  border: 2px red solid;
+  text-align: center;
+  width: 120px;
+  font-size: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: red;
+  margin-top: 30px;
+}
+.completed-case{
+  height: 300px;
+  width: 200px;
+  margin-top: 120px;
+}
+.completed-para{
+  font-size: 10px;
+  color: rgb(90, 106, 134);
+  margin-top: 10px;
+}
+/*testi*/
+.testi{
+  text-align: center;
+  padding: 0 400px;
+  margin-top: 100px;
+}
+.testi-para{
+  color: rgb(75, 94, 128);
+  margin-top: 20px;
+}
+.star{
+  color: rgb(252,192,44);
+  font-size: 25px;
+  margin-top: 10px;
+}
+.clifford{
+  font-size: 10px;
+  color: rgb(90, 106, 134);
+}
+.colorib{
+  font-size: 8px;
+  color: gray;
+}
+/*our recent news*/
+time{
+  font-size: 10px;
+  margin-left: 10px;
+  color: rgb(90, 106, 134);
+}
+/*footer-1*/
+.footer{
+  background-color: rgb(24,37,93);
+  padding: 80px 0;
+  margin-bottom: 100px;
+}
+.request{
+  margin-left: 200px;
+  width: 20%;
+}
+.request-call{
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+}
+.req-para{
+  font-size: 10px;
+  margin-top: 10px;
+  color: white;
+}
+.name{
+  border: 1px rgb(80, 81, 85) solid;
+  padding: 6px;
+  width: 250px;
+  border-radius: 2px;
+  color: white;
+  margin: 10px;
+}
+.name-box{
+  margin-right: 160px;
+}
+.service{
+  width: 380px;
+}
+.down{
+  margin-right: 170px;
+  margin-top: -5px;
+}
+.footer-brand{
+  width: 20%;
+  margin-left: 200px;
+}
+.get-in-touch{
+  margin-right: 250px;
+  margin-top: -70px;
+}
+.last-para{
+  font-size: 8px;
+  color: rgb(90, 106, 134);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.footer-nav a{
+  color: black;
+  font-size: 12px;
+  margin: 5px;
+}
+.company{
+  color: rgb(24,37,93);
+}
+.company-2{
+  color: rgb(24,37,93);
+  margin-top: -40px;
+}
+.col-2{
+  font-size: 12px;
+  color: rgb(90, 106, 134);
+}
+.col-3{
+  font-size: 12px;
+  color: rgb(90, 106, 134);
+}
+small{
+  margin-left: 300px;
+  padding: 20px;
+  font-size: 10px;
+  color: gray;
+}
+
+/*about.html*/
+.bg-img-about{
+  background-image: url(../assets/media/hero/about_hero.jpg);
+  height: 200px;
+  background-size: cover;
+}
+.about{
+  font-size: 35px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+/*services.html*/
+.bg-img-services{
+  background-image: url(../assets/media/hero/services_hero.jpg);
+  height: 200px;
+  background-size: cover;
+}
+/*cases.html*/
+.bg-img-cases{
+  background-image: url(../assets/media/hero/cases_hero.jpg);
+  height: 200px;
+  background-size: cover;
+}
+.images{
+  position: relative;
+}
+.marketing{
+  height: 80px;
+  width: 250px;
+  background-color: white;
+  position: absolute;
+  top: 81%;
+  left: 3%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.strategy{
+  font-size: 20px;
+}
+.completely{
+  font-size: 12px;
+  color: rgb(90, 106, 134);
+}
+.images img{
+  height: 400px;
+  width: 300px;
+  padding: 10px;
+  margin-top: 50px;
+}
+/*blog.html*/
+.bg-img-blog{
+  background-image: url(../assets/media/hero/blog_hero.jpg);
+  height: 200px;
+  background-size: cover;
+}
+.date{
+  background-color: rgb(255,73,101);
+  height: 62px;
+  width: 60px;
+  position: absolute;
+  top: 81%;
+  left: 5%;
+  border-radius: 3px;
+}
+.date time{
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+}
+.blog-img{
+  position: relative;
+}
+.blog-img img{
+  width: 500px;
+}
+.white-box{
+  background-color: white;
+  height: 150px;
+  width: 500px;
+  box-shadow: 3px 3px 6px 2px rgb(231, 224, 224);
+  margin-bottom: 30px;
+}
+.google{
+  padding: 20px;
+}
+.para-blog{
+  font-size: 10px;
+  color: rgb(90, 106, 134);
+  margin-left: 20px;
+}
+.user-nav a{
+  text-decoration: none;
+  color: gray;
+  font-size: 10px;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+.blog-section{
+  margin-top: 70px;
+}
+.small-box{
+  border: 1px solid rgb(221, 215, 215);
+  padding: 10px;
+  margin: 3px;
+}
+.abc{
+  margin-left: 180px;
+  margin-top: 70px;
+}
+
+/*aside*/
+.box-1{
+  height: 120px;
+  width: 260px;
+  background-color: rgb(252,247,255);
+  padding: 20px;
+}
+.aside{
+  margin-top: 70px;
+}
+.search{
+  font-size: 10px;
+  border: 1px solid rgb(240, 234, 234);
+  height: 30px;
+  width: 180px;
+  padding: 5px;
+  background-color: white;
+  color: grey;
+}
+.search-box {
+  background-color: rgb(255,73,101);
+  height: 28px;
+  width: 30px;
+  margin-left: 180px;
+  margin-top: -30px;
+}
+.search-box a{
+  color: white;
+  margin: 8px;
+}
+.search-icon{
+  font-size: 10px;
+  border: 1px solid rgb(255,73,101);
+  height: 35px;
+  width: 210px;
+  text-align: center;
+  padding: 5px;
+  background-color: white;
+  color: red;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+.box-2{
+  height: 300px;
+  width: 260px;
+  background-color: rgb(252,247,255);
+  padding: 20px;
+  margin-top: 20px;
+}
+.food{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.travel{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.box-3{
+  height: 350px;
+  width: 260px;
+  background-color: rgb(252,247,255);
+  padding: 20px;
+  margin-top: 20px;
+}
+.post-img{
+  height: 50px;
+  margin-top: 20px;
+}
+.from{
+  font-size: 12px;
+  margin-top: 30px;
+}
+.box-4{
+  height: 170px;
+  width: 260px;
+  background-color: rgb(252,247,255);
+  padding: 20px;
+  margin-top: 20px;
+}
+.project{
+  border: 1px solid rgb(230, 219, 219);
+  width: 80px;
+  background-color: white;
+  color: gray;
+  font-size: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.tag-clouds{
+  margin-top: 20px;
+}
+.box-5{
+  height: 250px;
+  width: 260px;
+  background-color: rgb(252,247,255);
+  padding: 20px;
+  margin-top: 20px;
+}
+.instagram img{
+  width: 70px;
+}
+.instagram{
+  margin-top: 30px;
+}
+.box-6{
+  height: 180px;
+  width: 260px;
+  background-color: rgb(252,247,255);
+  padding: 20px;
+  margin-top: 20px;
+}
+.email{
+  font-size: 10px;
+  border: 1px solid rgb(240, 234, 234);
+  height: 30px;
+  width: 210px;
+  padding: 5px;
+  background-color: white;
+  margin-top: 20px;
+  color: gray;
+}
+/*blog footer*/
+.blog-footer{
+  background-color: rgb(248,249,254);
+  margin-top: 80px;
+}
+.blog{
+  margin-top: 50px;
+}
+/*contact.html*/
+.bg-img-blog{
+  background-image: url(../assets/media/hero/contact_hero.jpg);
+  height: 200px;
+  background-size: cover;
+}
+.map{
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.get{
+  font-size: 20px;
+  font-weight: 700;
+}
+.enter-message{
+  height: 100px;
+  width: 470px;
+  border: 1px rgb(204, 196, 196) solid;
+  color: rgb(179, 175, 175);
+  font-size: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.enter-name{
+  height: 40px;
+  width: 230px;
+  border: 1px rgb(204, 196, 196) solid;
+  color: rgb(179, 175, 175);
+  font-size: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.enter-sub{
+  height: 40px;
+  width: 470px;
+  border: 1px rgb(204, 196, 196) solid;
+  color: rgb(179, 175, 175);
+  font-size: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.contact-icon a{
+  text-decoration: none;
+  color: grey;
+}
+.contact-icon{
+  margin-top: 50px;
+}
+.contact{
+  margin-bottom: 80px;
+}
+.send-contact{
+  border: 1px red solid;
+  text-align: center;
+  width: 120px;
+  font-size: 10px;
+  padding: 10px;
+  margin-bottom: 80px;
+  margin-top: 30px;
+  color: red;
+}
