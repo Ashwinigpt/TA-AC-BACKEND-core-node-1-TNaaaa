@@ -8,10 +8,11 @@ Q. Create a basic server using http's createServer
 
 ```js
 var http = require('http');
-http.createServer((req, res) => {
+var server = http.createServer(handleRquest);
+function handleRequest(req, res){
   console.log(req, res);
-  res.end('Welcome');
-}).listen(3000, 'localhost');
+}
+server.listen(5000);
 ```
 
 Q. create a node server 
@@ -20,10 +21,11 @@ Q. create a node server
 
 ```js
 var http = require('http');
-http.createServer((req, res) => {
-  console.log(req, res);
+var server = http.createServer(handleRquest);
+function handleRequest(req, res){
   res.end('My first server in NodeJS');
-}).listen(5100, 'localhost');
+}
+server.listen(5100);
 ```
 
 Q. write code to create a node server 
@@ -33,9 +35,12 @@ Q. write code to create a node server
 
 ```js
 var http = require('http');
-http.createServer((req, res) => {
+var server = http.createServer(handleRquest);
+function handleRequest(req, res){
   console.log(req.headers);
-}).listen(5555, 'localhost');
+  res.end(res.headers['user-agent']);
+}
+server.listen(5555);
 ```
 
 Q. write code to create a node server 
@@ -45,9 +50,12 @@ Q. write code to create a node server
 
 ```js
 var http = require('http');
-http.createServer((req, res) => {
+var server = http.createServer(handleRquest);
+function handleRequest(req, res){
   console.log(req.url, req.method);
-}).listen(5566, 'localhost');
+  res.end(req.method + req.url;)
+}
+server.listen(5566);
 ```
 
 Q. write code to create a node server 
@@ -59,7 +67,7 @@ Q. write code to create a node server
 var http = require('http');
 var server = http.createServer(handleRequest);
 function handleRequest(req, res){
-  res.end(req.headers);
+  res.end(JSON.stringyfy(req.headers));
 }
 server.listen(7000, () =>{
   console.log('server listening on port 7000');
@@ -75,7 +83,7 @@ var http = require('http');
 var server = http.createServer(handleRequest);
 function handleRequest(req, res){
   res.statusCode = 202;
-  res.end();
+  res.end(JSON.stringyfy(req.headers));
 }
 server.listen(3333, () =>{
   console.log('server listening on port 3333');
@@ -122,8 +130,8 @@ Q. create a basic node server
 var http = require('http');
 var server = http.createServer(handleRequest);
 function handleRequest(req, res){
-  res.setHeader('Content-Type', 'application/json');
-  res.end(JSON.stringyfy({message: 'Welcome to Nodejs'}));
+  res.writeHead(200, {'Content-Type', 'application/json'});
+  res.end(JSON.stringyfy({success: true, message: 'Welcome to Nodejs'}));
 }
 server.listen(8888, () =>{
   console.log('server listening on port 8888');
@@ -140,7 +148,8 @@ Q. create a server
 var http = require('http');
 var server = http.createServer(handleRequest);
 function handleRequest(req, res){
-  res.setHeader('Content-Type', 'text/html');
+  console.log(req.method);
+  res.writeHead(200, {'Content-Type', 'text/html'});
   res.end(`<h2>posted for first time</h2>`);
 }
 server.listen(5050, () =>{
@@ -166,7 +175,10 @@ function handleRequest(request, response){
     }else if(request.method === 'GET' && request.url === '/about'){
       response.setHeader('Content-Type', 'text/html');
       response.end('<h2>Ashwini Gupta<h2/>')
-    }else if(err) console.log(err);
+    }else {
+      res.statusCode = 404;
+      res.end('Page not found');
+    }
 }
 
 server.listen(2345, () => {
@@ -179,21 +191,22 @@ Q. Handle 2 requests on same route with different method
 
 ```js
 var http = require('http');
+var fs = require('fs');
 
 var server = http.createServer(handleRequest);
 
 function handleRequest(request, response){
     if(request.method === 'GET' && request.url === '/users'){
         response.setHeader('Content-Type', 'text/html');
-        response.end('Welcome to homepage')
+        fs.createReadStream('./form.html').pipe(response);
     }else if(request.method === 'POST' && request.url === '/users'){
         response.setHeader('Content-Type', 'text/html');
         response.end('Posted for the second time')
     }
 }
 
-server.listen(5000, () => {
-    console.log('server listening on port 5k');
+server.listen(2345, () => {
+    console.log('server listening on port 2345');
 });
 ```
 
@@ -207,7 +220,19 @@ Q. create a server and handle query params from the request on following url i.e
   - return json response with email from query params
 
   ```js
+  var http = require('http');
+  var fs = require('fs');
   var url = require("url");
-  const parsedUrl = url.parse(`/users?email=nodeserver@gmail.com`,true );
-  console.log(parsedUrl.pathname);
+
+  var server = http.createServer(handleRequest);
+  
+  function handleRequest(req, res){
+    var parsedURL = url.parse(req.url, true);
+    console.log(parsedURL.pathname, req.url);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringyfy(parsedURL.query))
+  }
+  server.listen(2345, () => {
+    console.log('server listening on port 2345');
+  });
   ```
